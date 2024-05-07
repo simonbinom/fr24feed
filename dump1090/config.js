@@ -34,7 +34,7 @@ DefaultZoomLvl   = 7;
 SiteShow    = true;           // true to show a center marker
 SiteLat     = 47.347210;       // position of the marker
 SiteLon     = 8.160850;
-SiteName    = "HB3XDB"; // tooltip of the marker
+SiteName    = "Seon"; // tooltip of the marker
 
 // -- Marker settings -------------------------------------
 
