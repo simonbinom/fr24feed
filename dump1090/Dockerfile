@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim AS builder
+FROM debian:bookworm-slim AS builder
 
 # Variables:
 ARG DUMP1090_VERSION=7.2
