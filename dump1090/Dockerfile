@@ -15,13 +15,13 @@ ADD ["https://github.com/flightaware/dump1090/archive/v${DUMP1090_VERSION}.tar.g
 
 RUN tar xzf "dump1090-$DUMP1090_VERSION.tar.gz" && \
     cd -- "dump1090-$DUMP1090_VERSION" && \
-    ./prepare-build.sh bullseye && \
-    cd package-bullseye && \
+    ./prepare-build.sh bookworm && \
+    cd package-bookworm && \
     dpkg-buildpackage -b --no-sign && \
     dump1090_arch="$( dpkg --print-architecture )" && \
     cp -- "../dump1090-fa_${DUMP1090_VERSION}_${dump1090_arch}.deb" /tmp/dump1090-fa.deb
 
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 LABEL maintainer="Egor Tensin <Egor.Tensin@gmail.com>"
 
